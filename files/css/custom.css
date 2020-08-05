@@ -1,0 +1,14 @@
+
+#cital-extension{
+    width: 400px !important;
+    height: 600px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-top: 0px;
+}
+
+.navbar-brand{
+    font-family: 'Caveat', cursive;
+    margin-left: 165px;
+    font-size: 28px;
+}
