@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cital - Citation Generator</title>
+        <link rel="stylesheet" href="files/css/bootstrap.min.css">
+        <link rel="stylesheet" href="files/css/custom.css">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body id="cital-extension">
+
+        <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                  <span class="navbar-brand mb-0 h1" style="">Cital</span>
+                </div>
+        </nav>
+        <div class="container">
+                <div class="mb-3 mt-3">
+                        <label for="doi_number" class="form-label">DOI Number</label>
+                        <input type="text" class="form-control" id="doi_number" required>
+                </div>
+                <div class="mb-3">
+                        <label for="select-format" class="form-label">Formatting Style</label>
+                        <select class="form-select" aria-label="Select Citation Format" id="select-format" required>
+                                <option value="apa">APA</option>
+                                <option value="bibtex">BibTeX</option>
+                                <option value="university-of-york-mla">MLA</option>
+                                <option value="university-of-york-harvard">Harvard</option>
+                                <option value="elsevier-vancouver">Vancouver</option>
+                        </select>
+                </div>
+                <div class="mb-3">
+                        <label for="select-language" class="form-label">Language and Country</label>
+                        <select class="form-select" aria-label="Select Citation Format" id="select-language" required>
+                                <option value="en-US">en-US</option>
+                                <option value="en-GB">en-GB</option>
+                                <option value="fr-FR">fr-FR</option>
+                                <option value="de-DE">de-DE</option>
+                                <option value="zh-CN">zh-CN</option>
+                        </select>
+                </div>
+                <div class="mb-3">
+                        <center>
+                        <button type="button" class="btn btn-dark">Submit</button>
+
+                        </center>
+                </div>
+        </div>
+        <script src="files/js/jquery.js"></script>
+        <script src="files/js/popper.min.js"></script>
+        <script src="files/js/bootstrap.min.js"></script>
+</body>
+
+</html>
