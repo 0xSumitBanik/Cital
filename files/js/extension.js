@@ -4,7 +4,6 @@ document.querySelector('#submit-btn').addEventListener("click", function () {
   let langauge = document.getElementById('select-language').value;
   let output = document.querySelector('#message');
 
-  addClass = (element, className) => element.classList += " className"
 
   //API Calling
   fetch('https://citation.crosscite.org/format?doi=' + doi_url + '&style=' + citation_format + '&lang=' + langauge)
