@@ -2,61 +2,66 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cital - Citation Generator</title>
-<link rel="stylesheet" href="files/css/bootstrap.min.css">
-<link rel="stylesheet" href="files/css/custom.css">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cital - Citation Generator</title>
+        <link rel="stylesheet" href="files/css/bootstrap.min.css">
+        <link rel="stylesheet" href="files/css/custom.css">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body id="cital-extension">
 
-<nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">Cital</span>
-        </div>
-</nav>
-<div class="container" style="margin-top: 20px;">
-        <label for="doi-url" class="form-label">DOI Number</label>
-        <div class=" mb-3">
-                <input type="text" class="form-control" id="doi-url" aria-describedby="head-text" required>
-                <small style="font-size: 10px;">For example, <i>https://doi.org/10.22207/jpam.14.spl1.40</i></small>
-        </div>
-        <div class="mb-3">
-                <label for="select-format" class="form-label">Formatting Style</label>
-                <select class="form-select" aria-label="Select Citation Format" id="select-format" required>
-                        <option value="apa">APA</option>
-                        <option value="bibtex">BibTeX</option>
-                        <option value="university-of-york-mla">MLA</option>
-                        <option value="university-of-york-harvard">Harvard</option>
-                        <option value="elsevier-vancouver">Vancouver</option>
-                </select>
-        </div>
-        <div class="mb-3">
-                <label for="select-language" class="form-label">Language and Country</label>
-                <select class="form-select" aria-label="Select Citation Format" id="select-language" required>
-                        <option value="en-US">en-US</option>
-                        <option value="en-GB">en-GB</option>
-                        <option value="fr-FR">fr-FR</option>
-                        <option value="de-DE">de-DE</option>
-                        <option value="zh-CN">zh-CN</option>
-                </select>
-        </div>
-        <div class="mb-3">
-                <center>
-                        <button type="button" class="btn btn-dark" id="submit-btn">Submit</button>
-                </center>
-        </div>
+        <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                        <span class="navbar-brand mb-0 h1">Cital</span>
+                </div>
+        </nav>
+        <div class="container" style="margin-top: 20px;">
+                <label for="doi-url" class="form-label">Enter the DOI</label>
+                <div class=" mb-3">
+                        <input type="text" class="form-control" id="doi-url" aria-describedby="head-text" autofocus required>
+                        <small style="font-size: 10px;">For example,
+                                <i>https://doi.org/10.22207/jpam.14.spl1.40</i></small>
+                </div>
+                <div class="mb-3">
+                        <label for="select-format" class="form-label">Formatting Style</label>
+                        <select class="form-select" aria-label="Select Citation Format" id="select-format" required>
+                                <option value="apa">APA</option>
+                                <option value="bibtex">BibTeX</option>
+                                <option value="university-of-york-mla">MLA</option>
+                                <option value="university-of-york-harvard">Harvard</option>
+                                <option value="elsevier-vancouver">Vancouver</option>
+                        </select>
+                </div>
+                <div class="mb-3">
+                        <label for="select-language" class="form-label">Language and Country</label>
+                        <select class="form-select" aria-label="Select Citation Format" id="select-language" required>
+                                <option value="en-US">en-US</option>
+                                <option value="en-GB">en-GB</option>
+                                <option value="fr-FR">fr-FR</option>
+                                <option value="de-DE">de-DE</option>
+                                <option value="zh-CN">zh-CN</option>
+                        </select>
+                </div>
+                <div class="mb-3">
+                        <center>
+                                <button type="button" class="btn btn-dark" id="submit-btn">Submit</button>
+                        </center>
+                </div>
+                <div class="text-center" id="loader" style="visibility: hidden;">
+                        <div class="spinner-border" role="status">
+                                <span class="sr-only">Loading...</span>
+                        </div>
+                </div>
+                <div class="alert" role="alert" id="message" style="visibility: hidden;">
 
-        <div class="alert" role="alert" id="message" style="visibility: hidden;">
-                gg
+                </div>
         </div>
-</div>
-<script src="files/js/jquery.js"></script>
-<script src="files/js/popper.min.js"></script>
-<script src="files/js/bootstrap.min.js"></script>
-<script src="files/js/extension.js"></script>
+        <script src="files/js/jquery.js"></script>
+        <script src="files/js/popper.min.js"></script>
+        <script src="files/js/bootstrap.min.js"></script>
+        <script src="files/js/extension.js"></script>
 </body>
 
 </html>
