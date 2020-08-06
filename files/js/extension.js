@@ -2,6 +2,9 @@ document.querySelector('#submit-btn').addEventListener("click", function () {
   let doi_url = document.getElementById('doi-url').value;
   let citation_format = document.getElementById('select-format').value;
   let langauge = document.getElementById('select-language').value;
+  let output = document.querySelector('#message');
+
+  addClass = (element, className) => element.classList += " className"
 
   //API Calling
   fetch('https://citation.crosscite.org/format?doi=' + doi_url + '&style=' + citation_format + '&lang=' + langauge)
@@ -15,8 +18,9 @@ document.querySelector('#submit-btn').addEventListener("click", function () {
 
         // Examine the text in the response
         response.text().then(function (data) {
-          document.querySelector('#message').style.visibility = 'visible';
-          document.querySelector('#message').innerHTML = data
+          output.style.visibility = 'visible';
+          output.classList.add("alert-success")
+          output.innerHTML = data
         });
       }
     )
